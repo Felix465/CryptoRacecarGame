@@ -9,11 +9,12 @@ from twilio.rest import Client
 currentUser = None
 
 system = []
+#fake host and user info has been provided for demonstration
 mydb = mysql.connector.connect(
-    host="77.68.35.85",
-    user="y13felix",
-    password="x6J5de_13",
-    database="y13felix"
+    host="MYhost",
+    user="MYUSERNAME",
+    password="MYPASSWORD",
+    database="MYDATABASE"
 
 )
 
@@ -123,10 +124,11 @@ def SendSMS(num):
     sleep(1)
 
     MakeUserReturn = ''
-    account_number = 'AC784562f46e83189f98d17ad7afaf3cd6'
-    auth_token = '1127e4301ae7fdaecde5ead8be9b7b41'
+    # fake twilio info 
+    account_number = 'ACCOUNT'
+    auth_token = 'TOKEN'
 
-    twilio_number = '+16813846323'
+    twilio_number = 'NUMBER'
     target_number = f'{num}'
 
     client = Client(account_number, auth_token)
