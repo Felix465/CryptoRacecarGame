@@ -12,12 +12,12 @@ import matplotlib.pyplot as plt
 from binance_futures import *
 
 
-
+#fake user data 
 mydb = mysql.connector.connect(
-  host="77.68.35.85",
-  user="y13felix",
-  password="x6J5de_13",
-  database="y13felix"
+  host="HOST",
+  user="USER",
+  password="PASSWORD",
+  database="DATABASE"
 
 )
 
@@ -350,8 +350,9 @@ class Coins():
 
 
 def RawPrice(symbol):
-    secret = 'feee327df4dc662e369b5822229b8c64024ac022530aaea219d2ee23da09ba44'
-    public = 'a2afdb8290714eac935465c10f03cb1742a263cb4c1b847eb5cb6d59f39caacf'
+  # fake data 
+    secret = 'SECRET'
+    public = 'Public'
     binance = BinanceFutures(public, secret)
     info = binance.getPrice(symbol)
     price = info['price']
@@ -651,8 +652,8 @@ class Graphs:
             pass
 
     def CreateGraph(self, m):
-        secret = 'feee327df4dc662e369b5822229b8c64024ac022530aaea219d2ee23da09ba44'
-        public = 'a2afdb8290714eac935465c10f03cb1742a263cb4c1b847eb5cb6d59f39caacf'
+        secret = 'Seceret'
+        public = 'PUBLIC'
         binance = BinanceFutures(public, secret)
 
         x = binance.get_candles(f'{self.symbol}USDT', '1h')
